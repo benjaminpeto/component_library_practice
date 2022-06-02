@@ -2,3 +2,4 @@
 export * from './ToggleSwitch';
 export * from './Button';
 export * from './Heading';
+export * from './Link';

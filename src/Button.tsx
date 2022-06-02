@@ -8,7 +8,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   variant: 'primary' | 'secondary' | 'danger' | 'green';
 }
 
-/** Button element itself, you can choose between two different variants. */
+/** Button element itself, you can choose between 4 different variants. */
 export const Button = ({ children, variant = 'primary', ...props }: Props) => (
   <button
     {...props}
