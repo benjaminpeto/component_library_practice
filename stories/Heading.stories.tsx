@@ -6,12 +6,27 @@ const meta: Meta = {
   title: 'Headings/Heading',
   component: Heading,
   argTypes: {
-    children: {
-      defaultValue: 'Header',
+    text: {
+      defaultValue: 'Heading element',
+      description:
+        'You can change the text by typing in the inputfield on the right.',
     },
-    size: {
+    fontSize: {
       control: 'select',
-      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+      options: ['xl', '2xl', '3xl', '4xl', '5xl', '6xl'],
+      description:
+        'Available sizes for heading element. Choose one of the 6 options.',
+    },
+    textColor: {
+      control: 'radio',
+      options: ['blue-500', 'red-300', 'green-500', 'black', 'white'],
+      description: 'Choose the color of your font.',
+    },
+    letterSpacing: {
+      control: 'radio',
+      options: ['tighter', 'normal', 'widest'],
+      description:
+        'Letterspacing allows you to determine the space between letters.',
     },
   },
   parameters: {

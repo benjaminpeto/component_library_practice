@@ -7,7 +7,7 @@ const meta: Meta = {
   component: Button,
   argTypes: {
     children: {
-      defaultValue: 'Default',
+      defaultValue: 'Primary',
     },
   },
   parameters: {
