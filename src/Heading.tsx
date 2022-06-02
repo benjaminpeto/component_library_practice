@@ -17,10 +17,8 @@ export const Heading = ({
   letterSpacing = 'normal',
   fontWeight = 'normal',
   fontFamily = 'sans',
-  ...props
 }: HeadingProps) => (
   <h1
-    {...props}
     className={`text-${fontSize} text-${textColor} tracking-${letterSpacing} font-${fontWeight} font-${fontFamily}`}
   >
     {text}

@@ -1,6 +1,6 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 
-export interface Props extends HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   /** Providing text for the button */
   children: ReactNode;
 
@@ -9,9 +9,8 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 /** Button element itself, you can choose between 4 different variants. */
-export const Button = ({ children, variant = 'primary', ...props }: Props) => (
+export const Button = ({ children, variant = 'primary' }: ButtonProps) => (
   <button
-    {...props}
     className={
       variant === 'secondary'
         ? 'bg-blue-500 text-white py-2 px-4 rounded hover:bg-transparent hover:text-blue-700 hover:border hover:border-blue-700'

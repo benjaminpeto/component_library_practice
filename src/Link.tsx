@@ -18,11 +18,9 @@ export const Link = ({
   variant = 'primary',
   url = '#',
   onClick,
-  ...props
 }: LinkProps) => (
   <a
     href={url}
-    {...props}
     onClick={onClick}
     className={
       variant === 'primary' ? 'text-blue-500' : 'text-gray-600 underline'
