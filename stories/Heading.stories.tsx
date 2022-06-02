@@ -19,7 +19,7 @@ const meta: Meta = {
     },
     textColor: {
       control: 'radio',
-      options: ['blue-500', 'red-300', 'green-500', 'black', 'white'],
+      options: ['blue-500', 'gray-500', 'green-500', 'black', 'white'],
       description: 'Choose the color of your font.',
     },
     letterSpacing: {
@@ -27,6 +27,16 @@ const meta: Meta = {
       options: ['tighter', 'normal', 'widest'],
       description:
         'Letterspacing allows you to determine the space between letters.',
+    },
+    fontWeight: {
+      control: 'select',
+      options: ['thin', 'normal', 'bold', 'extrabold'],
+      description: 'You can decide how bold your text needs to be.',
+    },
+    fontFamily: {
+      control: 'select',
+      options: ['sans', 'serif', 'mono'],
+      description: 'Here you can choose the font style from these 3 options.',
     },
   },
   parameters: {
