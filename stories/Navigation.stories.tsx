@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { LinkHTMLAttributes } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Navigation } from '../src/Navigation';
@@ -11,7 +11,7 @@ export default {
   subcomponents: { Link, Button },
   argTypes: {
     children: {
-      defaultValue: 'Item 1',
+      defaultValue: 'Navigation Bar',
     },
   },
   parameters: {
@@ -26,48 +26,75 @@ const Empty: ComponentStory<typeof Navigation> = (args) => (
 const OneItem: ComponentStory<typeof Navigation> = (args) => (
   <Navigation {...args}>
     <Link
+      {...args}
       children="Item 1"
-      url="#"
+      url=""
       variant="primary"
       onClick={() => {
         console.log('been clicked');
       }}
-    ></Link>
+    />
   </Navigation>
 );
 
 const ManyItems: ComponentStory<typeof Navigation> = (args) => (
   <Navigation {...args}>
     <Link
+      {...args}
       children="Item 1"
-      url="#"
-      variant="primary"
-      onClick={() => {
-        console.log('been clicked');
-      }}
-    ></Link>
-    <Link
-      children="Item 2"
-      url="#"
-      variant="primary"
-      onClick={() => {
-        console.log('been clicked');
-      }}
-    ></Link>
-    <Link
-      children="Item 3"
-      url="#"
+      url=""
       variant="primary"
       onClick={() => {
         console.log('has been clicked');
       }}
-    ></Link>
+    />
+    <Link
+      {...args}
+      children="Item 2"
+      url=""
+      variant="primary"
+      onClick={() => {
+        console.log('has been clicked');
+      }}
+    />
+    <Link
+      {...args}
+      children="Item 3"
+      url=""
+      variant="primary"
+      onClick={() => {
+        console.log('has been clicked');
+      }}
+    />
     <Button children="CTA" variant="secondary"></Button>
   </Navigation>
 );
 
-export const Default = Empty.bind({});
+export const EmptyNav = Empty.bind({});
 
 export const SingleItem = OneItem.bind({});
 
 export const MultipleItem = ManyItems.bind({});
+
+// const NavTemplate: ComponentStory<typeof Navigation> = (args) => {
+//   const { NavProps } = args;
+//   return (
+//     <Navigation {...args}>
+//       {NavProps.map((item) => (
+//         <Link {...item} />
+//       ))}
+//     </Navigation>
+//   );
+// };
+
+// export const Empty = NavTemplate.bind({});
+// Empty.args = { items: [] };
+
+// export const OneItem = NavTemplate.bind({});
+// OneItem.args = {
+//   items: [
+//     {
+//       ...Default.args,
+//     },
+//   ],
+// };

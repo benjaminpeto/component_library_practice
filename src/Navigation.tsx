@@ -13,7 +13,7 @@ export const Navigation = ({
   height = '20',
   background = 'white',
   position = 'fixed',
-  contentPosition = 'center',
+  contentPosition = 'end',
 }: NavProps) => (
   <nav
     className={`container flex w-full m-4 space-x-6 px-6 ${position} justify-${contentPosition} items-center bg-${background} h-${height} rounded-xl`}
