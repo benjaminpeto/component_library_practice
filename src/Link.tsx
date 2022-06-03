@@ -23,7 +23,9 @@ export const Link = ({
     href={url}
     onClick={onClick}
     className={
-      variant === 'primary' ? 'text-blue-500' : 'text-gray-600 underline'
+      variant === 'primary'
+        ? 'text-blue-500 hover:text-blue-900'
+        : 'text-gray-600 underline hover:text-gray-900'
     }
   >
     {children}
