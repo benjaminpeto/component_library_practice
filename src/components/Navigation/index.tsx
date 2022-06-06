@@ -11,7 +11,7 @@ export interface NavProps extends HTMLAttributes<HTMLElement> {
 export const Navigation = ({
   children,
   height = '20',
-  background = 'white',
+  background = 'black',
   position = 'fixed',
   contentPosition = 'end',
 }: NavProps) => (

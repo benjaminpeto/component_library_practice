@@ -1,6 +1,6 @@
 //import React, { FC, HTMLAttributes, ReactChild } from 'react';
-export * from './ToggleSwitch';
-export * from './Button';
-export * from './Heading';
-export * from './Link';
-export * from './Navigation';
+export * from './components/ToggleSwitch';
+export * from './components/Button';
+export * from './components/Heading';
+export * from './components/Link';
+export * from './components/Navigation';

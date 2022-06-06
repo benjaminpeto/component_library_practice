@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { ToggleSwitch, ToggleSwitchProps } from '../src';
+import { ToggleSwitch, ToggleSwitchProps } from '.';
 
 const meta: Meta = {
   title: 'Buttons/Toggle Switch',
